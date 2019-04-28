@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using SwWebServiceRabbit.Web.Models;
+using System.Diagnostics;
 
 namespace SwWebServiceRabbit.Web.Controllers
 {
@@ -13,6 +10,14 @@ namespace SwWebServiceRabbit.Web.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Index(ToonViewModel model)
+        {
+            QueueConnector.Instance.Publish(JsonConvert.SerializeObject(model));
+
+            return RedirectToAction("Index");
         }
 
         public IActionResult Privacy()
