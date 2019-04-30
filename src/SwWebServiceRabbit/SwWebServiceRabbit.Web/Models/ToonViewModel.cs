@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using SwWebServiceRabbit.Web.Data;
 
 namespace SwWebServiceRabbit.Web.Models
 {
@@ -9,11 +10,5 @@ namespace SwWebServiceRabbit.Web.Models
 
         [JsonConverter(typeof(StringEnumConverter))]
         public Order Order { get; set; }
-    }
-
-    public enum Order
-    {
-        Jedi,
-        Sith,
     }
 }

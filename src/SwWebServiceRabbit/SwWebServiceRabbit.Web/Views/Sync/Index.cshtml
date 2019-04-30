@@ -24,4 +24,10 @@
             </div>
         </div>
     </form>
+    <ul>
+        @foreach (ToonViewModel toon in ViewBag.Toons)
+        {
+            <li>@toon.Name - @toon.Order</li>
+        }
+    </ul>
 </div>
