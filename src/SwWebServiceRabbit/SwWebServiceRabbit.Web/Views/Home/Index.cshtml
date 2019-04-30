@@ -3,25 +3,7 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <form method="POST">
-        <div class="fields">
-            <div class="field">
-                <label asp-for="Name"></label>
-                <input asp-for="Name" />
-            </div>
-            <div class="field">
-                <label asp-for="Order"></label>
-                <select asp-for="Order">
-                    <option>Jedi</option>
-                    <option>Sith</option>
-                </select>
-            </div>
-            <div class="field">
-                <button type="submit">Submit</button>
-            </div>
-        </div>
-    </form>
+<div class="text-left">
+    <h1 class="display-8">Event-driven architecture demo</h1>
+    <p>Select <a class="text-info" asp-area="" asp-controller="Sync">sync</a> or <a class="text-info" asp-area="" asp-controller="Async">async</a> method</p>
 </div>
