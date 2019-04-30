@@ -27,4 +27,9 @@
             <li>@toon.Name - @toon.Order</li>
         }
     </ul>
+    @if (ViewBag.Ex != null)
+    {
+        <p class="text-danger">Couldn't sync up with consumers.</p>
+        <p class="text-danger">@ViewBag.Ex</p>
+    }
 </div>
