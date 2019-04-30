@@ -1,22 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using SwWebServiceRabbit.Web.Data;
 using SwWebServiceRabbit.Web.Models;
+using System.Threading.Tasks;
 
 namespace SwWebServiceRabbit.Web.Controllers
 {
-    public class AsyncController : Controller
+    public class AsyncController : BaseController
     {
-        public IActionResult Index()
+        protected override string Title => "Async";
+
+        public AsyncController(ToonContext context)
+            : base(context)
         {
-            return View();
         }
 
-        [HttpPost]
-        public IActionResult Index(ToonViewModel model)
+        protected override async Task ChildIndex(ToonViewModel model)
         {
             QueueConnector.Instance.Publish(JsonConvert.SerializeObject(model));
-
-            return RedirectToAction("Index");
         }
     }
 }

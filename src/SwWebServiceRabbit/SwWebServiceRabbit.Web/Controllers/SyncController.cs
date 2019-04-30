@@ -1,41 +1,25 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using SwWebServiceRabbit.Web.Data;
+﻿using SwWebServiceRabbit.Web.Data;
 using SwWebServiceRabbit.Web.Models;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace SwWebServiceRabbit.Web.Controllers
 {
-    public class SyncController : Controller
+    public class SyncController : BaseController
     {
         readonly HttpClient _client;
-        readonly ToonContext _context;
+
+        protected override string Title => "Sync";
 
         public SyncController(ToonContext context)
+            : base(context)
         {
             _client = new HttpClient();
-            _context = context;
         }
 
-        public IActionResult Index()
+        protected override async Task ChildIndex(ToonViewModel model)
         {
-            ViewBag.Toons = _context.Toons.Select(o => new ToonViewModel
-            {
-                Name = o.Name,
-                Order = o.Order,
-            });
-
-            return View();
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Index(ToonViewModel model)
-        {
-            await _context.Toons.AddAsync(new Toon { Name = model.Name, Order = model.Order });
-            await _context.SaveChangesAsync();
-
             var url = string.Empty;
 
             switch (model.Order)
@@ -54,8 +38,6 @@ namespace SwWebServiceRabbit.Web.Controllers
             {
                 
             }
-
-            return RedirectToAction("Index");
         }
     }
 }

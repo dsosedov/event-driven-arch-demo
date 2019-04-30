@@ -1,11 +1,8 @@
 ﻿@model ToonViewModel
-@{
-    ViewData["Title"] = "Home Page";
-}
 
 <div class="text-left">
-    <h1 class="display-8">Sync</h1>
-    <p>Enter a name and pick the order</p>
+    <h1 class="display-8">@ViewData["Title"]</h1>
+    <p>Enter a name and pick an order</p>
     <form method="POST">
         <div class="fields">
             <div class="field">
