@@ -3,28 +3,28 @@
 
 // Write your JavaScript code.
 var populate = function () {
-    $.get("api/toons", function (data) {
+    $.get("api/jedis", function (data) {
         var html = "";
 
-        $.each(data, function (d) {
-            html += "<li>" + d + "</li>";
+        $.each(data, function (i, d) {
+            html += "<li>" + d.name + "</li>";
         });
 
-        $("#toons").append(html);
+        $("#jedis").html(html);
 
         console.log("success");
     })
     //.done(function () {
     //    console.log("second success");
     //})
-    .fail(function () {
-        console.error("error");
-    })
-    .always(function () {
-        console.log("finished");
+    .fail(function (err) {
+        console.error(err.status + " " + err.statusText);
+    //})
+    //.always(function () {
+    //    console.log("finished");
     });
 
-    setTimeout(populate, 1000);
+    setTimeout(populate, 5000);
 }
 
 populate();
