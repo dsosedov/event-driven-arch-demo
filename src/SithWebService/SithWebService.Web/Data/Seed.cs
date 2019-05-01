@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace SithWebSerivce.Web.Data
+namespace SithWebService.Web.Data
 {
     public static class Seed
     {

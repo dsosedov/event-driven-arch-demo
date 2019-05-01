@@ -1,9 +1,9 @@
-﻿using SithWebSerivce.Web.Data;
+﻿using SithWebService.Web.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
-namespace SithWebSerivce.Web.ApiControllers
+namespace SithWebService.Web.ApiControllers
 {
     [Route("api/siths")]
     [ApiController]

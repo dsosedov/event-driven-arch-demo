@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SithWebSerivce.Web.Data
+namespace SithWebService.Web.Data
 {
     public class Sith
     {

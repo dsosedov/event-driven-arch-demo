@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace SithWebSerivce.Web.Migrations
+namespace SithWebService.Web.Migrations
 {
     public partial class CreateSchema : Migration
     {

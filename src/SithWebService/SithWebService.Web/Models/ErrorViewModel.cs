@@ -1,6 +1,6 @@
 using System;
 
-namespace SithWebSerivce.Web.Models
+namespace SithWebService.Web.Models
 {
     public class ErrorViewModel
     {

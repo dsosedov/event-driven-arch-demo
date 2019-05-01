@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace SithWebSerivce.Web.Data
+namespace SithWebService.Web.Data
 {
     public class SithContext : DbContext
     {
