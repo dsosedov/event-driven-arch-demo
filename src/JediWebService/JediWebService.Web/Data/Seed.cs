@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace JediWebSerivce.Web.Data
+namespace JediWebService.Web.Data
 {
     public static class Seed
     {

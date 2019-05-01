@@ -1,9 +1,9 @@
-﻿using JediWebSerivce.Web.Data;
+﻿using JediWebService.Web.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
-namespace JediWebSerivce.Web.ApiControllers
+namespace JediWebService.Web.ApiControllers
 {
     [Route("api/jedis")]
     [ApiController]

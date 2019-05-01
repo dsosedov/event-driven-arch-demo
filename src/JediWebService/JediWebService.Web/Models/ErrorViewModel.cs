@@ -1,6 +1,6 @@
 using System;
 
-namespace JediWebSerivce.Web.Models
+namespace JediWebService.Web.Models
 {
     public class ErrorViewModel
     {

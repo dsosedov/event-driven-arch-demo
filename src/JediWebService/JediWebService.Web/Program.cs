@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace JediWebSerivce.Web
+namespace JediWebService.Web
 {
     public class Program
     {

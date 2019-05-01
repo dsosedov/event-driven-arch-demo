@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace JediWebSerivce.Web.Data
+namespace JediWebService.Web.Data
 {
     public class Jedi
     {

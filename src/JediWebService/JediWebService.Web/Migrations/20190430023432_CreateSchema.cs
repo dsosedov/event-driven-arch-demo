@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace JediWebSerivce.Web.Migrations
+namespace JediWebService.Web.Migrations
 {
     public partial class CreateSchema : Migration
     {

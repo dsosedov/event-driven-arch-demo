@@ -1,4 +1,4 @@
-﻿using JediWebSerivce.Web.Data;
+﻿using JediWebService.Web.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace JediWebSerivce.Web
+namespace JediWebService.Web
 {
     public class Startup
     {
