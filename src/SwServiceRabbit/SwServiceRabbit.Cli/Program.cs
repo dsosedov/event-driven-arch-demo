@@ -29,6 +29,7 @@ namespace SwServiceRabbit.Cli
 
                     _channel.BasicConsume(QueueName, true, consumer);
 
+                    Console.WriteLine($"{nameof(SwServiceRabbit)} is running...");
                     Console.ReadLine();
                 }
             }
