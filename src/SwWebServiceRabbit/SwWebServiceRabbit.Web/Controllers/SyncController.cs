@@ -25,10 +25,10 @@ namespace SwWebServiceRabbit.Web.Controllers
             switch (model.Order)
             {
                 case Order.Jedi:
-                    url = "http://localhost:51585/api/jedis";
+                    url = "http://localhost:5001/api/jedis";
                     break;
                 case Order.Sith:
-                    url = "http://localhost:51586/api/siths";
+                    url = "http://localhost:5002/api/siths";
                     break;
             }
 
